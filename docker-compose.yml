@@ -1,0 +1,82 @@
+#version: '3.7'
+#
+#networks:
+#  wise_network:
+#    driver: "bridge"
+#
+#volumes:
+#  mongo_data:
+#    driver: "local"
+#  rabbitmq_data:
+#    driver: "local"
+#
+#services:
+#  mongodb:
+#    image: mongo:latest
+#    container_name: notification_wise_mongodb
+#    restart: always
+#    ports:
+#      - "27017:27017"
+#    networks:
+#      - wise_network
+#    volumes:
+#      - mongo_data:/data/db
+#      - ./mongo-init/:/docker-entrypoint-initdb.d/:ro
+#    environment:
+#      MONGO_INITDB_ROOT_USERNAME: ${MONGO_ROOT_USERNAME:-admin}
+#      MONGO_INITDB_ROOT_PASSWORD: ${MONGO_ROOT_PASSWORD:-password}
+#
+#  rabbitmq:
+#    image: rabbitmq:3.9-management
+#    container_name: notification_wise_rabbitmq
+#    restart: always
+#    ports:
+#      - "5672:5672"
+#      - "15672:15672"
+#    networks:
+#      - wise_network
+#    volumes:
+#      - rabbitmq_data:/var/lib/rabbitmq
+#    environment:
+#      - RABBITMQ_DEFAULT_USER=GRaPHerf
+#      - RABBITMQ_DEFAULT_PASS=xcU204QDLk2@
+#
+#  backend:
+#    build:
+#      context: ./
+#      dockerfile: Dockerfile
+#    container_name: notification_wise_backend
+#    restart: on-failure
+#    environment:
+#      SPRING_DATA_MONGODB_URI: mongodb://${MONGO_ROOT_USERNAME:-admin}:${MONGO_ROOT_PASSWORD:-password}@mongodb:27017/admin?authSource=admin
+#    depends_on:
+#      - mongodb
+#      - rabbitmq
+#    ports:
+#      - "8084:8084"
+#    networks:
+#      - wise_network
+
+volumes:
+  postgres_data:
+    driver: "local"
+
+networks:
+  postgres_compose_network:
+    driver: "bridge"
+
+services:
+  postgres:
+    image: postgres:alpine
+    container_name: postgres_wise_commerce_product_compose
+    restart: always
+    environment:
+      - POSTGRES_DB=wiseCommerceProduct
+      - POSTGRES_PASSWORD=admin
+      - TZ=America/Sao_Paulo
+    ports:
+      - "5432:5432"
+    networks:
+      - postgres_compose_network
+    volumes:
+      - postgres_data:/var/lib/postgresql/data

@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ffbdef1e-4a43-4684-910a-fce1368f86ec" name="Changes" comment="feat: First commit">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HELP.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/wise/orderreceiver/OrderReceiverApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/wise/orderreceiver/application/facade/OrderReceiverFacade.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/wise/orderreceiver/application/facade/converter/PaymentMethodRequestToDomain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/wise/orderreceiver/application/strategy/CreditCardValidationStrategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/wise/orderreceiver/application/strategy/PaymentValidationStrategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/wise/orderreceiver/application/strategy/PixValidationStrategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/wise/orderreceiver/application/strategy/TicketValidationStrategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/wise/orderreceiver/application/usecase/CalculateTotalOrderUseCase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/wise/orderreceiver/application/usecase/FindClientByIdentifierUseCase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/wise/orderreceiver/application/usecase/FindProductsBySkuUseCase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/wise/orderreceiver/application/usecase/ValidatePaymentMethodUseCase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/wise/orderreceiver/domain/Client.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/wise/orderreceiver/domain/PaymentMethod.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/wise/orderreceiver/domain/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/wise/orderreceiver/domain/enums/PaymentMethodTypeEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/wise/orderreceiver/gateway/ClientGateway.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/wise/orderreceiver/gateway/ProductGateway.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/wise/orderreceiver/gateway/openfeign/ClientOpenFeignAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/wise/orderreceiver/gateway/openfeign/ClientOpenFeignClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/wise/orderreceiver/gateway/openfeign/ProductOpenFeignAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/wise/orderreceiver/gateway/openfeign/ProductOpenFeignClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/wise/orderreceiver/gateway/openfeign/converter/ClientResponseToClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/wise/orderreceiver/gateway/openfeign/converter/GraphQLResponseToProduct.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/wise/orderreceiver/gateway/openfeign/request/GraphQLRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/wise/orderreceiver/gateway/openfeign/response/ClientResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/wise/orderreceiver/gateway/openfeign/response/GraphQLResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/wise/orderreceiver/gateway/openfeign/response/ProductResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/wise/orderreceiver/infrastructure/rest/controller/OrderReceiverApi.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/wise/orderreceiver/infrastructure/rest/controller/OrderReceiverController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/wise/orderreceiver/infrastructure/rest/controller/exception/BusinessException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/wise/orderreceiver/infrastructure/rest/controller/handlers/CustomExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/wise/orderreceiver/infrastructure/rest/controller/handlers/ErrorResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/wise/orderreceiver/infrastructure/rest/dtos/request/OrderRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/wise/orderreceiver/infrastructure/rest/dtos/request/PaymentMethodRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/wise/orderreceiver/infrastructure/rest/dtos/request/ProductRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/br/com/wise/orderreceiver/OrderReceiverApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2yw3G5VvHacJkjqL48m3NcfkeGF" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Application.OrderReceiverApplication.executor": "Debug",
+    "JUnit.OrderReceiverApplicationTests.executor": "Debug",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "/Users/mateusbonet/Documents/projetos/wise-order-receiver",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
+  },
+  "keyToStringList": {
+    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
+      "GitIgnore"
+    ]
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="br.com.wise.orderreceiver.domain" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="br.com.wise.orderreceiver.application.strategy" />
+      <recent name="br.com.wise.orderreceiver.gateway" />
+    </key>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ffbdef1e-4a43-4684-910a-fce1368f86ec" name="Changes" comment="" />
+      <created>1750731709916</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1750731709916</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="feat: First commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: First commit" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/br/com/wise/orderreceiver/application/facade/OrderReceiverFacade.java</url>
+          <line>29</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/br/com/wise/orderreceiver/application/facade/OrderReceiverFacade.java</url>
+          <line>30</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/br/com/wise/orderreceiver/application/facade/OrderReceiverFacade.java</url>
+          <line>33</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
