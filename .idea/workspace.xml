@@ -5,35 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ffbdef1e-4a43-4684-910a-fce1368f86ec" name="Changes" comment="feat: General settings">
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/wise/orderreceiver/application/facade/converter/ClientRequestToDomain.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/wise/orderreceiver/application/facade/converter/ProductRequestToDomain.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/wise/orderreceiver/application/usecase/ProcessOrderUseCase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/wise/orderreceiver/application/usecase/PublishOrderUseCase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/wise/orderreceiver/domain/Order.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/wise/orderreceiver/gateway/SendOrderGateway.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/wise/orderreceiver/gateway/client/rabbitmq/SendOrderAdapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/wise/orderreceiver/infrastructure/configuration/OrderMessageConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/wise/orderreceiver/infrastructure/configuration/RabbitMQConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/wise/orderreceiver/OrderReceiverApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/wise/orderreceiver/OrderReceiverApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/wise/orderreceiver/application/facade/OrderReceiverFacade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/wise/orderreceiver/application/facade/OrderReceiverFacade.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/wise/orderreceiver/application/usecase/CalculateTotalOrderUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/wise/orderreceiver/application/usecase/CalculateTotalOrderUseCase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/wise/orderreceiver/application/usecase/FindProductsBySkuUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/wise/orderreceiver/application/usecase/FindProductsBySkuUseCase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/wise/orderreceiver/domain/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/wise/orderreceiver/domain/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/wise/orderreceiver/domain/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/wise/orderreceiver/domain/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/wise/orderreceiver/gateway/openfeign/ClientOpenFeignAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/wise/orderreceiver/gateway/client/openfeign/ClientOpenFeignAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/wise/orderreceiver/gateway/openfeign/ClientOpenFeignClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/wise/orderreceiver/gateway/client/openfeign/ClientOpenFeignClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/wise/orderreceiver/gateway/openfeign/ProductOpenFeignAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/wise/orderreceiver/gateway/client/openfeign/ProductOpenFeignAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/wise/orderreceiver/gateway/openfeign/ProductOpenFeignClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/wise/orderreceiver/gateway/client/openfeign/ProductOpenFeignClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/wise/orderreceiver/gateway/openfeign/converter/ClientResponseToClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/wise/orderreceiver/gateway/client/openfeign/converter/ClientResponseToClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/wise/orderreceiver/gateway/openfeign/converter/GraphQLResponseToProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/wise/orderreceiver/gateway/client/openfeign/converter/GraphQLResponseToProduct.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/wise/orderreceiver/gateway/openfeign/request/GraphQLRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/wise/orderreceiver/gateway/client/openfeign/request/GraphQLRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/wise/orderreceiver/gateway/openfeign/response/ClientResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/wise/orderreceiver/gateway/client/openfeign/response/ClientResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/wise/orderreceiver/gateway/openfeign/response/GraphQLResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/wise/orderreceiver/gateway/client/openfeign/response/GraphQLResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/wise/orderreceiver/gateway/openfeign/response/ProductResponse.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,7 +81,15 @@
       <option name="project" value="LOCAL" />
       <updated>1751845580490</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="feat: General settings">
+      <option name="closed" value="true" />
+      <created>1752095456081</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1752095456081</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
