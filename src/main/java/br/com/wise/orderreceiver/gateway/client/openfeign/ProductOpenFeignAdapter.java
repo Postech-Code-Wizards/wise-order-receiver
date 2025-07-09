@@ -1,10 +1,10 @@
-package br.com.wise.orderreceiver.gateway.openfeign;
+package br.com.wise.orderreceiver.gateway.client.openfeign;
 
 import br.com.wise.orderreceiver.domain.Product;
 import br.com.wise.orderreceiver.gateway.ProductGateway;
-import br.com.wise.orderreceiver.gateway.openfeign.converter.GraphQLResponseToProduct;
-import br.com.wise.orderreceiver.gateway.openfeign.request.GraphQLRequest;
-import br.com.wise.orderreceiver.gateway.openfeign.response.GraphQLResponse;
+import br.com.wise.orderreceiver.gateway.client.openfeign.converter.GraphQLResponseToProduct;
+import br.com.wise.orderreceiver.gateway.client.openfeign.request.GraphQLRequest;
+import br.com.wise.orderreceiver.gateway.client.openfeign.response.GraphQLResponse;
 import br.com.wise.orderreceiver.infrastructure.rest.controller.exception.BusinessException;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -25,7 +25,7 @@ public class ProductOpenFeignAdapter implements ProductGateway {
     @Override
     public Product getProductBySKU(String sku) {
 
-        String query = "query FindProductBySku($sku: String!) { findProductBySku(sku: $sku) { id name description category price stock inStock sku } }";
+        String query = "query FindProductBySku($sku: String!) { findProductBySku(sku: $sku) { id name description category price sku } }";
         Map<String, Object> variables = new HashMap<>();
         variables.put("sku", sku);
 

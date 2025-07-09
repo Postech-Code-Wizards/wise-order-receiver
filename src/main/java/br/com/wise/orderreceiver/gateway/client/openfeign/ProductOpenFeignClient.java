@@ -1,7 +1,7 @@
-package br.com.wise.orderreceiver.gateway.openfeign;
+package br.com.wise.orderreceiver.gateway.client.openfeign;
 
-import br.com.wise.orderreceiver.gateway.openfeign.request.GraphQLRequest;
-import br.com.wise.orderreceiver.gateway.openfeign.response.GraphQLResponse;
+import br.com.wise.orderreceiver.gateway.client.openfeign.request.GraphQLRequest;
+import br.com.wise.orderreceiver.gateway.client.openfeign.response.GraphQLResponse;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;

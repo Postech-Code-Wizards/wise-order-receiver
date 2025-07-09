@@ -1,4 +1,4 @@
-package br.com.wise.orderreceiver.gateway.openfeign.request;
+package br.com.wise.orderreceiver.gateway.client.openfeign.request;
 
 import lombok.Builder;
 import lombok.Data;

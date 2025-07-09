@@ -1,4 +1,4 @@
-#version: '3.7'
+version: '3.8'
 #
 #networks:
 #  wise_network:
@@ -57,26 +57,13 @@
 #    networks:
 #      - wise_network
 
-volumes:
-  postgres_data:
-    driver: "local"
-
-networks:
-  postgres_compose_network:
-    driver: "bridge"
-
 services:
-  postgres:
-    image: postgres:alpine
-    container_name: postgres_wise_commerce_product_compose
-    restart: always
+  rabbitmq:
+    image: rabbitmq:3.11-management-alpine
+    container_name: rabbitmq
     environment:
-      - POSTGRES_DB=wiseCommerceProduct
-      - POSTGRES_PASSWORD=admin
-      - TZ=America/Sao_Paulo
+      RABBITMQ_DEFAULT_USER: wise
+      RABBITMQ_DEFAULT_PASS: admin
     ports:
-      - "5432:5432"
-    networks:
-      - postgres_compose_network
-    volumes:
-      - postgres_data:/var/lib/postgresql/data
+      - "5672:5672"
+      - "15672:15672"

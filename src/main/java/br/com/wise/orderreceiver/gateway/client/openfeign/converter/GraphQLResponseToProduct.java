@@ -1,7 +1,7 @@
-package br.com.wise.orderreceiver.gateway.openfeign.converter;
+package br.com.wise.orderreceiver.gateway.client.openfeign.converter;
 
 import br.com.wise.orderreceiver.domain.Product;
-import br.com.wise.orderreceiver.gateway.openfeign.response.GraphQLResponse;
+import br.com.wise.orderreceiver.gateway.client.openfeign.response.GraphQLResponse;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;

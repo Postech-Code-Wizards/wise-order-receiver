@@ -1,7 +1,7 @@
-package br.com.wise.orderreceiver.gateway.openfeign.converter;
+package br.com.wise.orderreceiver.gateway.client.openfeign.converter;
 
 import br.com.wise.orderreceiver.domain.Client;
-import br.com.wise.orderreceiver.gateway.openfeign.response.ClientResponse;
+import br.com.wise.orderreceiver.gateway.client.openfeign.response.ClientResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 

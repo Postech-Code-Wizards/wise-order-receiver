@@ -1,12 +1,11 @@
 package br.com.wise.orderreceiver.domain;
 
 import lombok.Builder;
-import lombok.Data;
+import lombok.Getter;
 
 import java.math.BigDecimal;
-import java.math.BigInteger;
 
-@Data
+@Getter
 @Builder
 public class Product {
 
@@ -15,10 +14,9 @@ public class Product {
     private String description;
     private String sku;
     private BigDecimal price;
-    private Boolean inStock;
-    private Integer stock;
+    private Integer quantity;
 
-    public BigDecimal getTotalPriceProduct(BigInteger quantity) {
+    public BigDecimal getTotalPriceProduct() {
         return price.multiply(new BigDecimal(quantity));
     }
 

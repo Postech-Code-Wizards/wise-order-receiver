@@ -1,9 +1,9 @@
-package br.com.wise.orderreceiver.gateway.openfeign;
+package br.com.wise.orderreceiver.gateway.client.openfeign;
 
 import br.com.wise.orderreceiver.domain.Client;
 import br.com.wise.orderreceiver.gateway.ClientGateway;
-import br.com.wise.orderreceiver.gateway.openfeign.converter.ClientResponseToClient;
-import br.com.wise.orderreceiver.gateway.openfeign.response.ClientResponse;
+import br.com.wise.orderreceiver.gateway.client.openfeign.converter.ClientResponseToClient;
+import br.com.wise.orderreceiver.gateway.client.openfeign.response.ClientResponse;
 import br.com.wise.orderreceiver.infrastructure.rest.controller.exception.BusinessException;
 import feign.FeignException;
 import lombok.RequiredArgsConstructor;

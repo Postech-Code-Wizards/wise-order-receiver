@@ -1,6 +1,6 @@
-package br.com.wise.orderreceiver.gateway.openfeign;
+package br.com.wise.orderreceiver.gateway.client.openfeign;
 
-import br.com.wise.orderreceiver.gateway.openfeign.response.ClientResponse;
+import br.com.wise.orderreceiver.gateway.client.openfeign.response.ClientResponse;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;

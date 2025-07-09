@@ -2,7 +2,6 @@ package br.com.wise.orderreceiver.application.usecase;
 
 import br.com.wise.orderreceiver.domain.Product;
 import br.com.wise.orderreceiver.gateway.ProductGateway;
-import br.com.wise.orderreceiver.infrastructure.rest.dtos.request.ProductRequest;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -15,10 +14,18 @@ public class FindProductsBySkuUseCase {
 
     private final ProductGateway productGateway;
 
-    public List<Product> execute(List<ProductRequest> productRequestList){
-        return productRequestList.stream()
-                .map(ProductRequest::getSku)
-                .map(productGateway::getProductBySKU)
+    public List<Product> execute(List<Product> productList){
+        return productList.stream()
+                .map(productRequest -> {
+                    Product product = productGateway.getProductBySKU(productRequest.getSku());
+                    return Product.builder()
+                            .name(product.getName())
+                            .description(product.getDescription())
+                            .sku(product.getSku())
+                            .price(product.getPrice())
+                            .quantity(productRequest.getQuantity())
+                            .build();
+                })
                 .filter(Objects::nonNull)
                 .toList();
     }
