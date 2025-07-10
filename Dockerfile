@@ -1,5 +1,5 @@
 # Construção da aplicação com Maven
-FROM maven:3.9.9-openjdk-24-alpine AS build
+FROM maven:3.9.9-amazoncorretto-21-alpine AS build
 
 WORKDIR /app
 
@@ -26,4 +26,4 @@ WORKDIR /app
 COPY --from=build /app/target/*.jar /app/app.jar
 
 # Executa o JAR com o comando Java
-ENTRYPOINT ["java", "-jar", "/app/app.jar"]
+ENTRYPOINT ["sh", "-c", "sleep 10 && java -jar /app/app.jar"]

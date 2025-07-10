@@ -26,9 +26,6 @@ public class ErrorResponse {
     }
 
     @JsonAutoDetect(fieldVisibility = ANY)
-    @AllArgsConstructor
-    static class ApiError {
-        private final String code;
-        private final String message;
+    record ApiError(String code, String message) {
     }
 }

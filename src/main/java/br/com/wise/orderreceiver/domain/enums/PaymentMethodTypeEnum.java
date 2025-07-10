@@ -1,5 +1,8 @@
 package br.com.wise.orderreceiver.domain.enums;
 
+import lombok.Getter;
+
+@Getter
 public enum PaymentMethodTypeEnum {
     CREDIT_CARD("CREDIT_CARD"),
     DEBIT_CARD("DEBIT_CARD"),
@@ -12,7 +15,4 @@ public enum PaymentMethodTypeEnum {
         this.value = value;
     }
 
-    public String getValue() {
-        return value;
-    }
 }
