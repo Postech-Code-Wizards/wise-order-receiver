@@ -35,7 +35,7 @@ class ValidatePaymentMethodUseCaseTest {
     @DisplayName("Should throw IllegalArgumentException when payment method is null")
     void shouldThrowIllegalArgumentExceptionWhenPaymentMethodIsNull() {
         PaymentValidationStrategy strategy = mock(PaymentValidationStrategy.class);
-        when(strategy.getType()).thenReturn(PaymentMethodTypeEnum.PIX);
+        when(strategy.getType()).thenReturn(PaymentMethodTypeEnum.DEBIT_CARD);
 
         ValidatePaymentMethodUseCase useCase = new ValidatePaymentMethodUseCase(List.of(strategy));
 
@@ -46,7 +46,7 @@ class ValidatePaymentMethodUseCaseTest {
     @DisplayName("Should throw IllegalArgumentException when payment type is null")
     void shouldThrowIllegalArgumentExceptionWhenPaymentTypeIsNull() {
         PaymentValidationStrategy strategy = mock(PaymentValidationStrategy.class);
-        when(strategy.getType()).thenReturn(PaymentMethodTypeEnum.PIX);
+        when(strategy.getType()).thenReturn(PaymentMethodTypeEnum.DEBIT_CARD);
 
         PaymentMethod paymentMethod = Instancio.of(PaymentMethod.class)
                 .set(field("paymentMethodTypeEnum"), null)
@@ -61,7 +61,7 @@ class ValidatePaymentMethodUseCaseTest {
     @DisplayName("Should throw UnsupportedOperationException when payment type is not supported")
     void shouldThrowUnsupportedOperationExceptionWhenPaymentTypeIsNotSupported() {
         PaymentValidationStrategy strategy = mock(PaymentValidationStrategy.class);
-        when(strategy.getType()).thenReturn(PaymentMethodTypeEnum.PIX);
+        when(strategy.getType()).thenReturn(PaymentMethodTypeEnum.DEBIT_CARD);
 
         PaymentMethod paymentMethod = Instancio.of(PaymentMethod.class)
                 .set(field("paymentMethodTypeEnum"), PaymentMethodTypeEnum.CREDIT_CARD)

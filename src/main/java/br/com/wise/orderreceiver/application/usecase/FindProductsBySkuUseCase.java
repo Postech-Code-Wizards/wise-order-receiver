@@ -19,6 +19,7 @@ public class FindProductsBySkuUseCase {
                 .map(productRequest -> {
                     Product product = productGateway.getProductBySKU(productRequest.getSku());
                     return Product.builder()
+                            .id(product.getId())
                             .name(product.getName())
                             .description(product.getDescription())
                             .sku(product.getSku())
