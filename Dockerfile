@@ -1,29 +1,16 @@
-# Construção da aplicação com Maven
 FROM maven:3.9.9-amazoncorretto-21-alpine AS build
 
 WORKDIR /app
 
-COPY mvnw .
-COPY .mvn .mvn
-COPY pom.xml .
+COPY ./pom.xml ./
+COPY ./src ./src
 
-# copia arquivos de configuração maven
-RUN chmod +x ./mvnw
-RUN ./mvnw dependency:go-offline -B
+RUN mvn clean package -DskipTests
 
-# Copia a pasta src para dentro de uma pasta src criada forçadamente
-COPY src src
-
-# Criando o JAR, e -X para debugar
-RUN ./mvnw package -DskipTests -X
-
-# Execução com Amazon Corretto 21 (jdk21)
 FROM amazoncorretto:21.0.5-al2023-headless
 
 WORKDIR /app
 
-# Copia o JAR construído para o diretório /app
-COPY --from=build /app/target/*.jar /app/app.jar
+COPY --from=build /app/target/*-SNAPSHOT.jar /app/app.jar
 
-# Executa o JAR com o comando Java
 ENTRYPOINT ["sh", "-c", "sleep 10 && java -jar /app/app.jar"]
