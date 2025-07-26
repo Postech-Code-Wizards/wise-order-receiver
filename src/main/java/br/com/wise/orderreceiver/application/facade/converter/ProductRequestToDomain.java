@@ -10,10 +10,8 @@ import org.springframework.stereotype.Component;
 public class ProductRequestToDomain {
 
     public Product convert(ProductRequest productRequest) {
-        return Product.builder()
-                .sku(productRequest.getSku())
-                .quantity(productRequest.getQuantity())
-                .build();
+        return new Product(productRequest.getSku(),
+                productRequest.getQuantity());
     }
 
 }

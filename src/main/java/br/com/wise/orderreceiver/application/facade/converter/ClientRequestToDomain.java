@@ -9,8 +9,6 @@ import org.springframework.stereotype.Component;
 public class ClientRequestToDomain {
 
     public Client execute(String identifier) {
-        return Client.builder()
-                .identifier(identifier)
-                .build();
+        return new Client(identifier);
     }
 }
