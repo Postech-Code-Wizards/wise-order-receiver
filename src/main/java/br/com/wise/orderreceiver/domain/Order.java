@@ -1,16 +1,14 @@
 package br.com.wise.orderreceiver.domain;
 
-import lombok.Builder;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 
-import java.math.BigDecimal;
 import java.util.List;
 
 @Getter
-@Builder
+@AllArgsConstructor
 public class Order {
 
-    private BigDecimal totalPrice;
     private Client client;
     private List<Product> productList;
     private PaymentMethod paymentMethod;

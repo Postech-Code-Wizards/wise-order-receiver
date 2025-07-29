@@ -18,7 +18,7 @@ public class SendOrderAdapter implements SendOrderGateway {
     @Override
     public void send(String message) {
 
-        log.info("[{}] Sending ID message to RabbitMQ.", this.getClass().getSimpleName());
+        log.info("[{}] Sending order message to RabbitMQ.", this.getClass().getSimpleName());
 
         rabbitTemplate.convertAndSend(
                 RabbitMQConfig.EXCHANGE_NAME,

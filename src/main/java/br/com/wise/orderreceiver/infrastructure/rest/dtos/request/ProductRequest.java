@@ -1,9 +1,12 @@
 package br.com.wise.orderreceiver.infrastructure.rest.dtos.request;
 
-import lombok.Data;
+import lombok.Getter;
 import lombok.NonNull;
+import lombok.Setter;
 
-@Data
+
+@Getter
+@Setter
 public class ProductRequest {
 
     @NonNull

@@ -32,11 +32,9 @@ public class OrderReceiverFacade {
                 .map(productRequestToDomain::convert)
                 .toList();
 
-        Order order = Order.builder()
-                .client(client)
-                .productList(productList)
-                .paymentMethod(paymentMethodRequestToDomain.convert(orderRequest.getPaymentMethodRequest()))
-                .build();
+        Order order = new Order(client,
+                productList,
+                paymentMethodRequestToDomain.convert(orderRequest.getPaymentMethodRequest()));
 
         orderReceiverUseCase.execute(order);
 

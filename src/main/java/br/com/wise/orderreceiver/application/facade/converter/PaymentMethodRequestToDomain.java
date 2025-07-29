@@ -10,12 +10,10 @@ import org.springframework.stereotype.Component;
 public class PaymentMethodRequestToDomain {
 
     public PaymentMethod convert(PaymentMethodRequest paymentMethodRequest) {
-        return PaymentMethod.builder()
-                .paymentMethodTypeEnum(paymentMethodRequest.getPaymentMethodTypeEnum())
-                .cardNumber(paymentMethodRequest.getCardNumber())
-                .cardExpiryDate(paymentMethodRequest.getCardExpiryDate())
-                .cardHolderName(paymentMethodRequest.getCardHolderName())
-                .cardCvv(paymentMethodRequest.getCardCvv())
-                .build();
+        return new PaymentMethod(paymentMethodRequest.getPaymentMethodTypeEnum(),
+                paymentMethodRequest.getCardNumber(),
+                paymentMethodRequest.getCardHolderName(),
+                paymentMethodRequest.getCardExpiryDate(),
+                paymentMethodRequest.getCardCvv());
     }
 }
